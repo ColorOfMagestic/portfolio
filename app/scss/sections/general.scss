@@ -1,0 +1,67 @@
+html {
+  font-size: $base;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background: $mainColor;
+  font-family: "Lato";
+  font-size: $general;
+  color: $textColor;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Vogue";
+  font-size: $title;
+  color: $secondColor;
+}
+
+.section-title {
+  position: relative;
+  text-align: center;
+  &::before {
+    @include circle;
+  }
+}
+
+.text {
+  font-size: $text;
+}
+
+.green {
+  color: $greenColor;
+}
+
+@media (min-width: $desktopSmall) and ((max-width: $desktopLarge)) {
+  .container {
+    width: 72%;
+  }
+
+  .title {
+    font-size: $title/1.5;
+  }
+
+  .text {
+    font-size: $text/1.5;
+  }
+}
+
+@media (min-width: $mobile) and ((max-width: $tablet)) {
+  .container {
+    width: 90%;
+  }
+
+  .title {
+    font-size: $title/1.5;
+  }
+
+  .text {
+    font-size: $base;
+  }
+} ;

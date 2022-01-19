@@ -1,0 +1,53 @@
+.page {
+  .conditions {
+    position: relative;
+    .conditions-title {
+      margin-top: 4.6875rem;
+      &::before {
+        bottom: 35%;
+        left: 27%;
+      }
+    }
+    .conditions-wrapper {
+      background-color: #fff;
+      .conditions_list {
+        padding: 3.125rem 0;
+        padding-left: 6.25rem;
+
+        list-style: none;
+        .conditions_list-item {
+          margin-bottom: 1.5625rem;
+          color: $mainColor;
+        }
+      }
+    }
+    .conditions-btn_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 4.6875rem 0;
+      .conditions-btn {
+        position: relative;
+        @include btn();
+        background-color: $secondColor;
+        border: 5px solid $secondColor;
+        &::after {
+          @include circle;
+          bottom: 0;
+          right: -5.3125rem;
+        }
+        &:hover {
+          border-color: $greenColor;
+        }
+      }
+    }
+    .conditions_decoration-bot_left {
+      bottom: -25rem;
+      left: 0;
+    }
+    .conditions_decoration-bot_right {
+      bottom: -10rem;
+      right: 0;
+    }
+  }
+}

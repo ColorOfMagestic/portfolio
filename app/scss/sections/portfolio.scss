@@ -1,0 +1,145 @@
+.page {
+  .portfolio {
+    position: relative;
+    padding-top: 4.6875rem;
+    background-color: $secondColor;
+
+    .container {
+      .portfolio-title {
+        color: $mainColor;
+        &::before {
+          bottom: 35%;
+          left: 25%;
+        }
+      }
+
+      .swiper-portfolio {
+        .swiper-wrapper {
+          margin-bottom: 7.5rem;
+          .portfolio-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .img-block {
+              position: relative;
+              width: 70%;
+              min-height: 700px;
+              margin: 3.125rem auto;
+              border-radius: 10px;
+              background-repeat: no-repeat;
+              background-size: cover;
+              box-shadow: 0px 0px 25px 5px rgb(0, 0, 0);
+
+              .swiper-slide_link {
+                @include btn();
+                position: absolute;
+                bottom: 3.75rem;
+                left: 3.75rem;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                max-width: 250px;
+                padding-left: 2rem;
+                background-color: $secondColor;
+                border: 5px solid $secondColor;
+                text-transform: uppercase;
+                opacity: 0;
+                &::before {
+                  position: absolute;
+                  display: block;
+                  right: 2rem;
+                  width: 24px;
+                  height: 24px;
+                  content: "";
+                  background-color: $greenColor;
+                  border-radius: 50%;
+                }
+                &:hover {
+                  border-color: $greenColor;
+                }
+              }
+              .swiper-slide_descriptoin {
+                position: absolute;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                background-color: rgba(0, 0, 0, 0.7);
+                transition: linear 1s;
+                opacity: 1;
+                z-index: 1;
+                .descriptoin-content {
+                  padding: 0 4.375rem 4.375rem;
+                  .descriptoin-title {
+                    font-size: 50px;
+                    color: $greenColor;
+                  }
+                  .description-text {
+                    font-size: 25px;
+                    line-height: 25px;
+                  }
+                }
+              }
+              &:hover {
+                .swiper-slide_link {
+                  transition: 1s linear;
+                  transition-delay: 0.5s;
+                  opacity: 1;
+                  z-index: 5;
+                }
+
+                .swiper-slide_descriptoin {
+                  opacity: 0;
+                }
+              }
+            }
+            .academy {
+              background-image: url(../img/1.png);
+            }
+            .elena {
+              background-image: url(../img/2.png);
+            }
+          }
+        }
+
+        .swiper-pagination {
+          bottom: 7%;
+          .swiper-pagination-bullet {
+            width: 18px;
+            height: 18px;
+            background-color: $mainColor;
+          }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          top: 40%;
+        }
+
+        .swiper-button-prev {
+          left: 6.875rem;
+          &::after {
+            content: url(../../img/slider_arrow_left.svg);
+          }
+        }
+
+        .swiper-button-next {
+          right: 6.875rem;
+          &::after {
+            content: url(../../img/slider_arrow_right.svg);
+          }
+        }
+      }
+    }
+    .portfolio_decoration-bot_left {
+      bottom: -25%;
+      left: 0;
+    }
+    .portfolio_decoration-bot_right {
+      bottom: -25%;
+      right: 0;
+    }
+  }
+}

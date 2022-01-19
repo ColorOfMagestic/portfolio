@@ -1,0 +1,54 @@
+@mixin font($font-size, $line-height, $font-weight) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+@mixin circle {
+  position: absolute;
+  display: block;
+  width: 45px;
+  height: 45px;
+  content: "";
+  border-radius: 50%;
+  background-color: $greenColor;
+}
+
+@mixin btn() {
+  width: 282px;
+  height: 70px;
+  font-size: 25px;
+  font-weight: 700;
+  color: $mainColor;
+  border-radius: 10px;
+  transition: border linear 0.5s;
+  &:active {
+    transform: translate(2px, 2px);
+  }
+}
+
+@mixin info_links-list {
+  display: flex;
+  margin-left: auto;
+  list-style: none;
+  .info_links-list_item {
+    .info_links-list_item-link {
+      .img {
+        width: 70px;
+        height: 70px;
+        transition: 0.8s;
+        path {
+          transition: linear 0.8s;
+        }
+      }
+      &:hover {
+        .img {
+          transform: scale(1.2);
+          path {
+            fill: $secondColor;
+          }
+        }
+      }
+    }
+  }
+}

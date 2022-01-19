@@ -1,0 +1,115 @@
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 10;
+  transition: linear 0.5s;
+  .modal_overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    .modal_wrapper {
+      position: relative;
+      width: 30%;
+      background-color: $secondColor;
+      padding: 50px;
+      padding-top: 100px;
+      border-radius: 50px;
+      .modal_close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+
+        &::after,
+        &::before {
+          position: absolute;
+          top: center;
+          display: block;
+          width: 50px;
+          height: 5px;
+          background-color: $greenColor;
+          content: "";
+          border-radius: 30px;
+          transition: linear 0.6s;
+        }
+
+        &::after {
+          transform: rotate(45deg);
+        }
+        &::before {
+          transform: rotate(-45deg);
+        }
+
+        &:hover {
+          &::after,
+          &::before {
+            background-color: $mainColor;
+          }
+        }
+      }
+
+      .connect_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .connect_form_label {
+          width: 100%;
+          margin-bottom: 30px;
+          .connect_form_input {
+            display: block;
+            width: 100%;
+            padding: 15px 10px;
+            border: 4px solid $greenColor;
+            border-radius: 10px;
+            outline: none;
+            &:focus {
+              border: 4px solid $mainColor;
+            }
+          }
+        }
+
+        .connect_form_textarea {
+          display: block;
+          width: 100%;
+          height: 200px;
+          max-height: 300px;
+          padding: 15px 10px;
+          margin-bottom: 45px;
+          border: 4px solid $greenColor;
+          border-radius: 10px;
+          outline: none;
+          resize: none;
+          &:focus {
+            border: 4px solid $mainColor;
+          }
+        }
+
+        .connect_form_btn {
+          width: 145px;
+          height: 50px;
+          font-size: 40px;
+          font-family: "Vogue";
+          border-radius: 10px;
+          color: $mainColor;
+          background-color: $greenColor;
+        }
+      }
+    }
+  }
+}
+
+.modal--close {
+  opacity: 0;
+  z-index: -1;
+}
