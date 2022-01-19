@@ -1,0 +1,16 @@
+.DS_Store
+.idea
+.vscode
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+Thumbs.db
+app/css
+app/js/main.min.js
+app/scss/reset+.scss
+app/scss/style.scss
+dist
+node_modules/
+

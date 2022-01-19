@@ -1,0 +1,18 @@
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-recess-order"
+    ],
+    "plugins": [
+		"stylelint-order",
+		"stylelint-scss"
+	],
+	"rules": {
+            "indentation": 2,
+            "no-descending-specificity": null,
+		"order/properties-order": [
+			"margin",
+			"height"
+		]
+	}
+}
