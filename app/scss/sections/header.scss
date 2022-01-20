@@ -405,6 +405,8 @@
       }
 
       .header_info {
+        position: relative;
+        z-index: 1;
         margin-top: 5.5875rem;
 
         .btn_about-me {
