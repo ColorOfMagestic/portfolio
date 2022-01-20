@@ -47,6 +47,14 @@ body {
     font-size: $title/1.5;
   }
 
+  .section-title {
+    &::before {
+      @include circle;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
   .text {
     font-size: $text/1.5;
   }
