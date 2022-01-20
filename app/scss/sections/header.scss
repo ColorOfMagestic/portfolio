@@ -267,6 +267,24 @@
 
 @media (min-width: $desktopSmall) and ((max-width: $desktopLarge)) {
   .header {
+    .header_decoration-top {
+      top: 0;
+      left: 0;
+      width: 15%;
+    }
+
+    .header_decoration-bottom-left {
+      bottom: -235px;
+      left: -45px;
+      width: 20%;
+    }
+
+    .header_decoration-bottom-right {
+      bottom: -360px;
+      right: 0;
+      width: 12%;
+    }
+
     .container {
       padding-top: 3.4375rem;
 
