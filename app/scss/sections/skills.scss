@@ -50,3 +50,44 @@
     }
   }
 }
+
+@media (min-width: $desktopSmall) and ((max-width: $desktopLarge)) {
+  .page {
+    .skills {
+      padding-top: 2rem;
+
+      .skills_list {
+        padding: 3.125rem 0;
+        padding-left: 6.25rem;
+        list-style: none;
+
+        .skills_list-item {
+          margin-bottom: 1.25rem;
+          font-size: $generalMedium;
+        }
+      }
+
+      .skills_wrapper {
+        .skills-btn_wrapper {
+          .skills-btn_span {
+            @include circle;
+            width: 35px;
+            height: 35px;
+          }
+          .span_1 {
+            left: -9rem;
+          }
+          .span_2 {
+            left: -4.5rem;
+          }
+          .skills-btn {
+            @include btn();
+            max-width: 220px;
+            height: 55px;
+            font-size: $generalMedium;
+          }
+        }
+      }
+    }
+  }
+}
