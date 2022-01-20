@@ -76,6 +76,29 @@ body {
   }
 }
 
+@media (min-width: $tabletLarge) and ((max-width: $laptop)) {
+  .container {
+    width: 80%;
+    .section-title {
+      &::before {
+        @include circle;
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .section-title {
+    font-size: $title/2;
+
+    &::before {
+      @include circle;
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
 @media (min-width: $mobile) and ((max-width: $tablet)) {
   .container {
     width: 90%;

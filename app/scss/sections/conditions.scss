@@ -151,3 +151,54 @@
     }
   }
 }
+@media (min-width: $tabletLarge) and ((max-width: $laptop)) {
+  .page {
+    .conditions {
+      .conditions-title {
+        margin-top: 2rem;
+        &::before {
+          bottom: 34%;
+          left: 28%;
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .conditions-wrapper {
+        .conditions_list {
+          .conditions_list-item {
+            margin-bottom: 1.25rem;
+            font-size: $generalMedium;
+          }
+        }
+      }
+      .conditions-btn_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4.6875rem 0;
+        .conditions-btn {
+          @include btn();
+          width: 220px;
+          height: 55px;
+          font-size: $generalMedium;
+
+          &::after {
+            width: 25px;
+            height: 25px;
+            right: -4rem;
+          }
+        }
+      }
+      .conditions_decoration-bot_left {
+        bottom: -8rem;
+        left: 0;
+        width: 20%;
+      }
+      .conditions_decoration-bot_right {
+        bottom: -5rem;
+        right: 0;
+        width: 20%;
+      }
+    }
+  }
+}
