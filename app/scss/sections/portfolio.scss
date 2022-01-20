@@ -73,12 +73,12 @@
                 .descriptoin-content {
                   padding: 0 4.375rem 4.375rem;
                   .descriptoin-title {
-                    font-size: 50px;
+                    font-size: $text;
                     color: $greenColor;
                   }
                   .description-text {
-                    font-size: 25px;
-                    line-height: 25px;
+                    font-size: $general;
+                    line-height: 1;
                   }
                 }
               }
@@ -140,6 +140,90 @@
     .portfolio_decoration-bot_right {
       bottom: -25%;
       right: 0;
+    }
+  }
+}
+
+@media (min-width: $desktopSmall) and ((max-width: $desktopLarge)) {
+  .page {
+    .portfolio {
+      padding-top: 0;
+
+      .container {
+        .swiper-portfolio {
+          .swiper-wrapper {
+            margin-bottom: 3.5rem;
+            .portfolio-slide {
+              .img-block {
+                width: 60%;
+                min-height: 470px;
+                .swiper-slide_descriptoin {
+                  .descriptoin-content {
+                    padding: 0 2.5rem 2.5rem;
+                    .descriptoin-title {
+                      font-size: $generalMedium * 2;
+                      color: $greenColor;
+                    }
+                    .description-text {
+                      font-size: $generalMedium;
+                      line-height: 1;
+                    }
+                  }
+                }
+                .swiper-slide_link {
+                  @include btn();
+                  bottom: 2.5rem;
+                  left: 2.5rem;
+                  max-width: 190px;
+                  height: 50px;
+                  font-size: $generalMedium;
+                  &::before {
+                    width: 18px;
+                    height: 18px;
+                    content: "";
+                    background-color: $greenColor;
+                    border-radius: 50%;
+                  }
+                  &:hover {
+                    border-color: $greenColor;
+                  }
+                }
+              }
+            }
+          }
+
+          .swiper-pagination {
+            bottom: 6%;
+            .swiper-pagination-bullet {
+              width: 14px;
+              height: 14px;
+            }
+          }
+
+          .swiper-button-prev,
+          .swiper-button-next {
+            top: 45%;
+          }
+
+          .swiper-button-prev {
+            left: 8rem;
+          }
+
+          .swiper-button-next {
+            right: 8rem;
+          }
+        }
+      }
+      .portfolio_decoration-bot_left {
+        bottom: -20%;
+        left: 0;
+        width: 15%;
+      }
+      .portfolio_decoration-bot_right {
+        bottom: -20%;
+        right: 0;
+        width: 15%;
+      }
     }
   }
 }
