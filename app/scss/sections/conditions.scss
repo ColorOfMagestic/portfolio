@@ -51,3 +51,53 @@
     }
   }
 }
+
+@media (min-width: $desktopSmall) and ((max-width: $desktopLarge)) {
+  .page {
+    .conditions {
+      .conditions-title {
+        margin-top: 2rem;
+        &::before {
+          bottom: 35%;
+          left: 28%;
+        }
+      }
+      .conditions-wrapper {
+        .conditions_list {
+          .conditions_list-item {
+            margin-bottom: 1.25rem;
+            font-size: $generalMedium;
+          }
+        }
+      }
+      .conditions-btn_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4.6875rem 0;
+        .conditions-btn {
+          @include btn();
+          width: 220px;
+          height: 55px;
+          font-size: $generalMedium;
+
+          &::after {
+            width: 35px;
+            height: 35px;
+            right: -5.3125rem;
+          }
+        }
+      }
+      .conditions_decoration-bot_left {
+        bottom: -15rem;
+        left: 0;
+        width: 20%;
+      }
+      .conditions_decoration-bot_right {
+        bottom: -8rem;
+        right: 0;
+        width: 15%;
+      }
+    }
+  }
+}
