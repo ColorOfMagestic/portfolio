@@ -50,3 +50,24 @@
     }
   }
 }
+@media (min-width: $laptop) and ((max-width: $desktopSmall)) {
+  .page-footer {
+    .slogan {
+      padding: 2rem 0;
+      font-size: $generalMedium;
+    }
+    .info_links-list {
+      @include info_links-list;
+    }
+    .copyright_wrapper {
+      .autor {
+        margin: 1.25rem 0 1rem;
+        font-size: $generalMedium;
+      }
+      .year {
+        margin-bottom: 1.25rem;
+        font-size: $generalMedium;
+      }
+    }
+  }
+}

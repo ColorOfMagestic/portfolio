@@ -426,10 +426,29 @@
 
 @media (min-width: $laptop) and ((max-width: $desktopSmall)) {
   .header {
+    .header_decoration-top {
+      top: 0;
+      left: 0;
+      width: 15%;
+    }
+
+    .header_decoration-bottom-left {
+      bottom: -10rem;
+      left: -45px;
+      width: 20%;
+    }
+
+    .header_decoration-bottom-right {
+      bottom: -20rem;
+      right: 0;
+      width: 12%;
+    }
+
     .container {
       padding-top: 3.4375rem;
 
       .about-me_wrapper {
+        width: 66%;
         .about-me_close {
           top: 1.25rem;
           left: 1.25rem;

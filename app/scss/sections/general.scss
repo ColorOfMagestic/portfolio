@@ -60,6 +60,22 @@ body {
   }
 }
 
+@media (min-width: $laptop) and ((max-width: $desktopSmall)) {
+  .container {
+    width: 75%;
+  }
+
+  .section-title {
+    font-size: $title/2;
+
+    &::before {
+      @include circle;
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
 @media (min-width: $mobile) and ((max-width: $tablet)) {
   .container {
     width: 90%;
