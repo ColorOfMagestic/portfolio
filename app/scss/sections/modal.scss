@@ -109,6 +109,51 @@
   }
 }
 
+@media (min-width: $desktopSmall) and ((max-width: $desktopLarge)) {
+  .modal {
+    .modal_overlay {
+      .modal_wrapper {
+        width: 30%;
+        padding: 2rem;
+        padding-top: 5rem;
+        border-radius: 50px;
+        .modal_close {
+          top: 1.5rem;
+          right: 1.5rem;
+          width: 35px;
+          height: 35px;
+
+          &::after,
+          &::before {
+            width: 30px;
+            height: 5px;
+          }
+        }
+
+        .connect_form {
+          .connect_form_label {
+            margin-bottom: 1.25rem;
+            .connect_form_input {
+              padding: 0.75rem 0.5rem;
+              font-size: $generalMedium;
+            }
+          }
+
+          .connect_form_textarea {
+            height: 150px;
+            padding: 0.75rem 0.5rem;
+            font-size: $generalMedium;
+          }
+
+          .connect_form_btn {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 .modal--close {
   opacity: 0;
   z-index: -1;
