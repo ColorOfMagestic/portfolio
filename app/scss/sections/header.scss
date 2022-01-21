@@ -761,18 +761,19 @@
   .header {
     min-height: 75vh;
     .header_decoration-top {
-      width: 20%;
+      width: 18%;
     }
 
     .header_decoration-bottom-left {
-      bottom: -310px;
-      left: -100px;
+      bottom: -6rem;
+      left: -0;
+      width: 25%;
     }
 
     .header_decoration-bottom-right {
-      bottom: -410px;
+      bottom: -16rem;
       right: 0;
-      width: 20%;
+      width: 15%;
     }
 
     .container {
@@ -890,7 +891,7 @@
               width: 25px;
               height: 25px;
               bottom: 2%;
-              right: 2.75rem;
+              right: -1.25rem;
             }
           }
           .header_discr {
@@ -925,6 +926,7 @@
     }
   }
 }
+
 @media (min-width: $mobile) and ((max-width: $tablet)) {
   .header {
     .header_decoration-top {

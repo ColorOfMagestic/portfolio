@@ -184,3 +184,53 @@
     }
   }
 }
+
+@media (min-width: $tablet) and ((max-width: $tabletLarge)) {
+  .page {
+    .skills {
+      padding-top: 2rem;
+      .skills-title {
+        &::before {
+          bottom: 34%;
+          left: 35%;
+        }
+      }
+
+      .skills_list {
+        padding: 2.5rem 0;
+        padding-left: 2.5rem;
+
+        .skills_list-item {
+          margin-bottom: 1rem;
+          font-size: $generalMedium;
+        }
+      }
+
+      .skills_wrapper {
+        padding-top: 0;
+        .skills-img {
+          width: 20%;
+        }
+        .skills-btn_wrapper {
+          .skills-btn_span {
+            @include circle;
+            width: 25px;
+            height: 25px;
+          }
+          .span_1 {
+            left: -7rem;
+          }
+          .span_2 {
+            left: -3.5rem;
+          }
+          .skills-btn {
+            @include btn();
+            max-width: 160px;
+            height: 50px;
+            font-size: $base - 2px;
+          }
+        }
+      }
+    }
+  }
+}
