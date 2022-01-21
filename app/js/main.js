@@ -58,7 +58,7 @@ function closeDescription() {
   );
 
   btnCloseDiscriptions.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("touchstart", (event) => {
       let parent = button.parentElement;
       parent.classList.toggle("img-block--active");
       if (parent.classList.contains("img-block--active")) {

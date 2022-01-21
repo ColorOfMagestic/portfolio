@@ -113,3 +113,25 @@
     }
   }
 }
+
+@media (min-width: $mobile) and ((max-width: $tablet)) {
+  .page-footer {
+    .slogan {
+      padding: 1.5rem 0 0;
+      font-size: $base;
+    }
+    .info_links-list {
+      @include info_links-list;
+    }
+    .copyright_wrapper {
+      .autor {
+        margin: 0 0 0.5rem;
+        font-size: $base;
+      }
+      .year {
+        margin-bottom: 1.25rem;
+        font-size: $base;
+      }
+    }
+  }
+}

@@ -127,8 +127,14 @@ body {
     width: 90%;
   }
 
-  .title {
-    font-size: $title/1.5;
+  .section-title {
+    font-size: $title/2;
+
+    &::before {
+      @include circle;
+      width: 20px;
+      height: 20px;
+    }
   }
 
   .text {

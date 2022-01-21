@@ -244,3 +244,54 @@
     }
   }
 }
+@media (min-width: $mobile) and ((max-width: $tablet)) {
+  .page {
+    .conditions {
+      .conditions-title {
+        margin-top: 2rem;
+        font-size: 3rem;
+        &::before {
+          bottom: 34%;
+          left: 5%;
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .conditions-wrapper {
+        .conditions_list {
+          padding: 1.5rem;
+          padding-left: 2.5rem;
+          .conditions_list-item {
+            margin-bottom: 1rem;
+            font-size: $base;
+          }
+        }
+      }
+      .conditions-btn_wrapper {
+        margin: 4.6875rem 0;
+        .conditions-btn {
+          @include btn();
+          width: 160px;
+          height: 50px;
+          font-size: $base - 2px;
+
+          &::after {
+            width: 20px;
+            height: 20px;
+            right: -3rem;
+          }
+        }
+      }
+      .conditions_decoration-bot_left {
+        bottom: 3rem;
+        left: 0;
+        width: 20%;
+      }
+      .conditions_decoration-bot_right {
+        bottom: 3rem;
+        right: 0;
+        width: 20%;
+      }
+    }
+  }
+}
