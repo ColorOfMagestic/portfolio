@@ -124,14 +124,14 @@
         .swiper-button-prev {
           left: 6.875rem;
           &::after {
-            content: url(../../img/slider_arrow_left.svg);
+            content: url(../img/slider_arrow_left.svg);
           }
         }
 
         .swiper-button-next {
           right: 6.875rem;
           &::after {
-            content: url(../../img/slider_arrow_right.svg);
+            content: url(../img/slider_arrow_right.svg);
           }
         }
       }
