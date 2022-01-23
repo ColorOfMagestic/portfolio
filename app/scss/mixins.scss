@@ -28,6 +28,7 @@
 }
 
 @mixin info_links-list {
+  z-index: 2;
   display: flex;
   margin-left: auto;
   list-style: none;
