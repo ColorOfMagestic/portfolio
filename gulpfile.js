@@ -25,7 +25,7 @@ function cleanDist() {
 }
 
 function images() {
-  return src("app/images/**/*")
+  return src("app/img/**/*")
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -36,11 +36,11 @@ function images() {
         }),
       ])
     )
-    .pipe(dest("dist/images"));
+    .pipe(dest("app/img"));
 }
 
 function scripts() {
-  return src(["node_modules/jquery/dist/jquery.js", "app/js/main.js"])
+  return src(["app/js/main.js"])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -67,7 +67,8 @@ function build() {
     [
       "app/css/style.min.css",
       "app/fonts/**/*",
-      "app/js/main.min.js",
+      "app/img/**/*",
+      "app/js/*.js",
       "app/*.html",
     ],
     { base: "app" }
@@ -94,6 +95,6 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 
 // gulp build - Удаление и перезапись содержимого папки /dist
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, build);
 // gulp - Запуск всех команд
 exports.default = parallel(styles, scripts, browsersync, watching);
