@@ -307,8 +307,8 @@
             font-size: 45px;
           }
           .about-me_text {
-            font-size: $generalMedium;
-            line-height: 1.5;
+            font-size: $base;
+            line-height: 1.2;
           }
         }
 
@@ -466,9 +466,10 @@
           .about-me_title {
             font-size: 45px;
           }
+
           .about-me_text {
-            font-size: $generalMedium;
-            line-height: 1.5;
+            font-size: $base;
+            line-height: 1.2;
           }
         }
 
@@ -631,8 +632,8 @@
           }
 
           .about-me_text {
-            font-size: $generalMedium;
-            line-height: 1.5;
+            font-size: $base;
+            line-height: 1.2;
           }
         }
 
@@ -802,8 +803,8 @@
           }
 
           .about-me_text {
-            font-size: $base;
-            line-height: 1.5;
+            font-size: $base - 2px;
+            line-height: 1;
           }
         }
 
@@ -979,8 +980,8 @@
           }
 
           .about-me_text {
-            font-size: $generalMedium;
-            line-height: 1;
+            font-size: $base - 2px;
+            line-height: 1.2;
           }
         }
 
