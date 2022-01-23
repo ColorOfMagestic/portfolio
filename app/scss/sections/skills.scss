@@ -51,7 +51,7 @@
   }
 }
 
-@media (min-width: $desktopSmall) and ((max-width: $desktopLarge)) {
+@media (min-width: $desktopSmall) and (max-width: $desktopLarge) {
   .page {
     .skills {
       padding-top: 2rem;
@@ -92,7 +92,7 @@
   }
 }
 
-@media (min-width: $laptop) and ((max-width: $desktopSmall)) {
+@media (min-width: $laptop) and (max-width: $desktopSmall) {
   .page {
     .skills {
       padding-top: 2rem;
@@ -138,7 +138,7 @@
     }
   }
 }
-@media (min-width: $tabletLarge) and ((max-width: $laptop)) {
+@media (min-width: $tabletLarge) and (max-width: $laptop) {
   .page {
     .skills {
       padding-top: 2rem;
@@ -185,7 +185,7 @@
   }
 }
 
-@media (min-width: $tablet) and ((max-width: $tabletLarge)) {
+@media (min-width: $tablet) and (max-width: $tabletLarge) {
   .page {
     .skills {
       padding-top: 2rem;
@@ -234,7 +234,7 @@
     }
   }
 }
-@media (min-width: $mobile) and ((max-width: $tablet)) {
+@media (min-width: $mobile) and (max-width: $tablet) {
   .page {
     .skills {
       padding-top: 2rem;

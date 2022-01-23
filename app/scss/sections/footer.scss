@@ -29,7 +29,7 @@
   }
 }
 
-@media (min-width: $desktopSmall) and ((max-width: $desktopLarge)) {
+@media (min-width: $desktopSmall) and (max-width: $desktopLarge) {
   .page-footer {
     .slogan {
       padding: 2rem 0;
@@ -50,7 +50,7 @@
     }
   }
 }
-@media (min-width: $laptop) and ((max-width: $desktopSmall)) {
+@media (min-width: $laptop) and (max-width: $desktopSmall) {
   .page-footer {
     .slogan {
       padding: 2rem 0;
@@ -71,7 +71,7 @@
     }
   }
 }
-@media (min-width: $tabletLarge) and ((max-width: $laptop)) {
+@media (min-width: $tabletLarge) and (max-width: $laptop) {
   .page-footer {
     .slogan {
       padding: 2rem 0;
@@ -92,7 +92,7 @@
     }
   }
 }
-@media (min-width: $tablet) and ((max-width: $tabletLarge)) {
+@media (min-width: $tablet) and (max-width: $tabletLarge) {
   .page-footer {
     .slogan {
       padding: 2rem 0;
@@ -114,7 +114,7 @@
   }
 }
 
-@media (min-width: $mobile) and ((max-width: $tablet)) {
+@media (min-width: $mobile) and (max-width: $tablet) {
   .page-footer {
     .slogan {
       padding: 1.5rem 0 0;

@@ -109,7 +109,7 @@
   }
 }
 
-@media (min-width: $desktopSmall) and ((max-width: $desktopLarge)) {
+@media (min-width: $desktopSmall) and (max-width: $desktopLarge) {
   .modal {
     .modal_overlay {
       .modal_wrapper {
@@ -154,7 +154,7 @@
   }
 }
 
-@media (min-width: $laptop) and ((max-width: $desktopSmall)) {
+@media (min-width: $laptop) and (max-width: $desktopSmall) {
   .modal {
     .modal_overlay {
       .modal_wrapper {
@@ -198,7 +198,7 @@
     }
   }
 }
-@media (min-width: $tabletLarge) and ((max-width: $laptop)) {
+@media (min-width: $tabletLarge) and (max-width: $laptop) {
   .modal {
     .modal_overlay {
       .modal_wrapper {
@@ -244,7 +244,7 @@
   }
 }
 
-@media (min-width: $tablet) and ((max-width: $tabletLarge)) {
+@media (min-width: $tablet) and (max-width: $tabletLarge) {
   .modal {
     .modal_overlay {
       .modal_wrapper {
@@ -288,7 +288,7 @@
     }
   }
 }
-@media (min-width: $mobile) and ((max-width: $tablet)) {
+@media (min-width: $mobile) and (max-width: $tablet) {
   .modal {
     .modal_overlay {
       .modal_wrapper {
