@@ -51,27 +51,6 @@ function aboutMe() {
   }
 }
 
-// Close description
-function closeDescription() {
-  const btnCloseDiscriptions = document.querySelectorAll(
-    ".btn_close-discription"
-  );
-
-  btnCloseDiscriptions.forEach((button) => {
-    button.addEventListener("touchstart", (event) => {
-      let parent = button.parentElement;
-      parent.classList.toggle("img-block--active");
-      if (parent.classList.contains("img-block--active")) {
-        button.classList.remove("btn_close-discription--open");
-        button.classList.add("btn_close-discription--close");
-      } else {
-        button.classList.add("btn_close-discription--open");
-        button.classList.remove("btn_close-discription--close");
-      }
-    });
-  });
-}
-
 // Modal
 function modal() {
   const modal = document.querySelector(".modal");
@@ -157,6 +136,5 @@ function form() {
 }
 mobileMenu();
 aboutMe();
-closeDescription();
 modal();
 form();
