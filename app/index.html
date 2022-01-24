@@ -56,7 +56,7 @@
                 <input
                   class="connect_form_input"
                   type="email"
-                  placeholder="Ваш Email:"
+                  placeholder="user@example.ru"
                 />
               </label>
               <label class="connect_form_label">
@@ -64,7 +64,7 @@
                   class="connect_form_input"
                   id="tel"
                   type="tel"
-                  placeholder="Ваш Телефон:"
+                  placeholder="+7(999)999-99-99"
                 />
               </label>
               <textarea
@@ -499,35 +499,39 @@
                 type="text"
                 placeholder="Ваше имя:"
                 name="name"
+                id="modalName"
               />
             </label>
             <label class="connect_form_label">
               <input
                 class="connect_form_input"
                 type="email"
-                placeholder="Ваш Email:"
+                placeholder="user@example.ru"
                 name="email"
+                id="modalEmail"
               />
             </label>
             <label class="connect_form_label">
               <input
                 class="connect_form_input connect_form_input-tel"
                 type="tel"
-                placeholder="Ваш Телефон:"
-                maxlength="13"
+                placeholder="+7(999)999-99-99"
                 name="tel"
+                id="modalTel"
               />
             </label>
             <textarea
               class="connect_form_textarea"
               placeholder="Сообщение:"
               name="message"
+              id="modalTextarea"
             ></textarea>
             <input
               class="connect_form_btn"
               role="button"
               type="submit"
               value="Ok!"
+              id="modalSubmit"
             />
           </form>
         </div>
