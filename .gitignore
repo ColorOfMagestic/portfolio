@@ -13,4 +13,5 @@ app/scss/reset+.scss
 app/scss/style.scss
 dist
 node_modules/
+app/PHPMailer-master
 
