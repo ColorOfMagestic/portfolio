@@ -15,7 +15,9 @@
       list-style: none;
 
       .skills_list-item {
+        position: relative;
         margin-bottom: 1.5625rem;
+        @extend %list-items;
       }
     }
 
@@ -64,6 +66,12 @@
         .skills_list-item {
           margin-bottom: 1.25rem;
           font-size: $generalMedium;
+          &::before {
+            top: 0.25rem;
+            left: -2rem;
+            width: 20px;
+            height: 20px;
+          }
         }
       }
 
@@ -111,6 +119,12 @@
         .skills_list-item {
           margin-bottom: 1.25rem;
           font-size: $generalMedium;
+          &::before {
+            top: 0.25rem;
+            left: -2rem;
+            width: 20px;
+            height: 20px;
+          }
         }
       }
 
@@ -157,6 +171,12 @@
         .skills_list-item {
           margin-bottom: 1.25rem;
           font-size: $generalMedium;
+          &::before {
+            top: 0.25rem;
+            left: -2rem;
+            width: 20px;
+            height: 20px;
+          }
         }
       }
 
@@ -203,6 +223,12 @@
         .skills_list-item {
           margin-bottom: 1rem;
           font-size: $generalMedium;
+          &::before {
+            top: 0.25rem;
+            left: -2rem;
+            width: 20px;
+            height: 20px;
+          }
         }
       }
 
@@ -254,6 +280,12 @@
         .skills_list-item {
           margin-bottom: 1rem;
           font-size: $base;
+          &::before {
+            top: 0.25rem;
+            left: -1.5rem;
+            width: 16px;
+            height: 16px;
+          }
         }
       }
 
