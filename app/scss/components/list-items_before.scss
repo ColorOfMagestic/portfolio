@@ -1,0 +1,10 @@
+%list-items {
+  &::before {
+    position: absolute;
+    top: 0.5rem;
+    left: -2.5rem;
+    @include circle();
+    width: 24px;
+    height: 24px;
+  }
+}
