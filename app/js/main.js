@@ -74,41 +74,73 @@ function modal() {
 
 function form() {
   const connectForm = document.forms.header_form;
-  const modalForm = document.forms.modal_form;
   const userName = connectForm[0];
   const userEmail = connectForm[1];
   const userTel = connectForm[2];
   const textarea = connectForm[3];
   const submit = connectForm[4];
 
+  const modalForm = document.forms.modal_form;
+  const modalUserName = modalForm[0];
+  const modalUserEmail = modalForm[1];
+  const modalUserTel = modalForm[2];
+  const modalSubmit = modalForm[4];
+
+  submit.disabled = true;
+  modalSubmit.disabled = true;
+
+  // field Name
   noNum(userName);
+  noNum(modalUserName);
+
+  nameValidate(userName, submit);
+  nameValidate(modalUserName, modalSubmit);
+
+  // field Email
+  emailValidate(userEmail, submit);
+  emailValidate(modalUserEmail, modalSubmit);
+
+  // field Tel
   noLetter(userTel);
+  noLetter(modalUserTel);
+  maskPhone("#tel", "+7(___)___-__-__");
+  maskPhone("#modalTel", "+7(___)___-__-__");
 
-  userName.addEventListener("change", () => {
-    if (!userName.value) {
-      userName.value = "";
-    } else {
-      userName.value = firstLetterUppercase(userName);
-    }
-  });
+  // Auxiliary functions
 
-  userEmail.addEventListener("change", validate);
-
-  function validate() {
-    let email = userEmail.value;
-    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-
-    if (email.match(pattern)) {
-      submit.disabled = false;
-      return;
-    } else {
-      submit.disabled = true;
-      userEmail.value = "";
-      return userEmail.setAttribute("placeholder", "Введите корректный Email!");
-    }
+  function nameValidate(inpit, button) {
+    inpit.addEventListener("focusout", () => {
+      if (!inpit.value) {
+        inpit.value = "";
+        button.disabled = true;
+        return inpit.setAttribute(
+          "placeholder",
+          " Поле не должно быть пустым!"
+        );
+      } else {
+        inpit.value = firstLetterUppercase(inpit);
+        button.disabled = false;
+      }
+    });
   }
 
-  maskPhone("#tel", "+7(___)___-__-__");
+  function emailValidate(input, button) {
+    input.addEventListener("focusout", validate);
+
+    function validate() {
+      let email = input.value;
+      let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (email.match(pattern)) {
+        button.disabled = false;
+        return;
+      } else {
+        button.disabled = true;
+        input.value = "";
+        return input.setAttribute("placeholder", "Введите корректный Email!");
+      }
+    }
+  }
 
   function noNum(input) {
     input.addEventListener("keyup", function () {
