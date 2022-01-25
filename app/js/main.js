@@ -27,10 +27,11 @@ function mobileMenu() {
 }
 
 // About me
+const aboutMeWrapper = document.querySelector(".about-me_wrapper");
+const aboutMeContent = document.querySelector(".about-me_content");
+const connectContent = document.querySelector(".connect_content");
+
 function aboutMe() {
-  const aboutMeWrapper = document.querySelector(".about-me_wrapper");
-  const aboutMeContent = document.querySelector(".about-me_content");
-  const connectContent = document.querySelector(".connect_content");
   const aboutMeClose = document.querySelector(".about-me_close");
   const btnAboutMe = document.querySelector(".btn_about-me");
 
@@ -51,22 +52,39 @@ function aboutMe() {
   }
 }
 
+function aboutMeCloseFunc() {
+  aboutMeWrapper.classList.add("about-me_wrapper--close");
+  aboutMeContent.classList.add("about-me_content--close");
+  connectContent.classList.add("connect_content--close");
+}
+
 // Modal
 function modal() {
-  const modal = document.querySelector(".modal");
-
+  const modals = document.querySelectorAll(".modal");
   const modalBtns = document.querySelectorAll(".modal-btn");
-  const modalClose = document.querySelector(".modal_close");
+  const modalCloseBtns = document.querySelectorAll(".modal_close");
 
   modalBtns.forEach((item) => {
     item.addEventListener("click", function (e) {
+      document.querySelector("body").style.overflow = "hidden";
+      document.querySelector("body").style.paddingRight = "16px";
       e.preventDefault();
-      modal.classList.remove("modal--close");
+      modals[0].classList.remove("modal--close");
     });
   });
 
-  modalClose.addEventListener("click", () => {
-    modal.classList.add("modal--close");
+  modalCloseBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      modals.forEach((modal) => {
+        document.querySelector("body").style.overflow = "scroll";
+
+        modal.classList.add("modal--close");
+      });
+    });
+  });
+
+  modalCloseBtns[0].addEventListener("click", () => {
+    document.querySelector("body").style.paddingRight = "0";
   });
 }
 
@@ -77,7 +95,6 @@ function form() {
   const userName = connectForm[0];
   const userEmail = connectForm[1];
   const userTel = connectForm[2];
-  const textarea = connectForm[3];
   const submit = connectForm[4];
 
   const modalForm = document.forms.modal_form;
@@ -86,8 +103,13 @@ function form() {
   const modalUserTel = modalForm[2];
   const modalSubmit = modalForm[4];
 
-  submit.disabled = true;
-  modalSubmit.disabled = true;
+  const buttons = document.querySelectorAll(".connect_form_btn");
+  const forms = document.querySelectorAll(".connect_form");
+  const sendMailText = document.querySelector(".sendmail-text");
+
+  buttons.forEach((btn) => {
+    btn.disabled = true;
+  });
 
   // field Name
   noNum(userName);
@@ -105,6 +127,40 @@ function form() {
   noLetter(modalUserTel);
   maskPhone("#tel", "+7(___)___-__-__");
   maskPhone("#modalTel", "+7(___)___-__-__");
+
+  // Fetch
+
+  forms.forEach((form) => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let url = "send_mail.php";
+
+      sendMail(this);
+
+      async function sendMail(form) {
+        const modal = document.querySelector(".modal-sendmail");
+        let formData = new FormData(form);
+        fetch(url, {
+          method: "post",
+          body: formData,
+        })
+          .then((response) => {
+            if (response.ok) {
+              modal.classList.remove("modal--close");
+              aboutMeCloseFunc();
+              sendMailText.textContent = "Ваше письмо отправлено успешно!";
+              form.reset();
+            } else {
+              sendMailText.textContent = "Что то пошло не так...";
+              throw new Error(`Error ${response.status}`);
+            }
+          })
+          .catch((error) => {
+            console.error("Ошибка:", error);
+          });
+      }
+    });
+  });
 
   // Auxiliary functions
 
@@ -164,7 +220,6 @@ function form() {
       return;
     }
   }
-  connectForm.reset();
 }
 mobileMenu();
 aboutMe();
