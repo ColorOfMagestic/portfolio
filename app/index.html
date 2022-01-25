@@ -44,9 +44,10 @@
           </div>
           <div class="connect_content connect_content--close">
             <h4 class="title connect_title">Обратная связь</h4>
-            <form class="connect_form" name="header_form" action="">
+            <form class="connect_form" name="header_form" action="#">
               <label class="connect_form_label">
                 <input
+                  name="name"
                   class="connect_form_input"
                   type="text"
                   placeholder="Ваше имя:"
@@ -54,6 +55,7 @@
               </label>
               <label class="connect_form_label">
                 <input
+                  name="email"
                   class="connect_form_input"
                   type="email"
                   placeholder="user@example.ru"
@@ -65,10 +67,12 @@
                   id="tel"
                   type="tel"
                   placeholder="+7(999)999-99-99"
+                  name="phone"
                 />
               </label>
               <textarea
                 class="connect_form_textarea"
+                name="message"
                 placeholder="Сообщение:"
               ></textarea>
               <input
@@ -500,7 +504,7 @@
         <div class="modal_wrapper">
           <button class="modal_close"></button>
 
-          <form class="connect_form" name="modal_form" action="">
+          <form class="connect_form" name="modal_form" action="#">
             <label class="connect_form_label">
               <input
                 class="connect_form_input"
@@ -542,6 +546,15 @@
               id="modalSubmit"
             />
           </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal modal-sendmail modal--close">
+      <div class="modal_overlay">
+        <div class="modal_wrapper">
+          <button class="modal_close"></button>
+          <p class="sendmail-text">Письмо отправлено</p>
         </div>
       </div>
     </section>

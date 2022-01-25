@@ -1,0 +1,130 @@
+.modal-sendmail {
+  .modal_overlay {
+    .modal_wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35%;
+      height: 300px;
+      padding: 3rem;
+      .sendmail-text {
+        color: $mainColor;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktopSmall) and (max-width: $desktopLarge) {
+  .modal-sendmail {
+    .modal_overlay {
+      .modal_wrapper {
+        width: 30%;
+        border-radius: 50px;
+        .modal_close {
+          top: 1.5rem;
+          right: 1.5rem;
+          width: 35px;
+          height: 35px;
+
+          &::after,
+          &::before {
+            width: 30px;
+            height: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $laptop) and (max-width: $desktopSmall) {
+  .modal-sendmail {
+    .modal_overlay {
+      .modal_wrapper {
+        width: 30%;
+        border-radius: 50px;
+        .modal_close {
+          top: 1.5rem;
+          right: 1.5rem;
+          width: 35px;
+          height: 35px;
+
+          &::after,
+          &::before {
+            width: 30px;
+            height: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $tabletLarge) and (max-width: $laptop) {
+  .modal-sendmail {
+    .modal_overlay {
+      .modal_wrapper {
+        width: 40%;
+        padding: 2rem;
+        border-radius: 50px;
+        .modal_close {
+          top: 1.5rem;
+          right: 1.5rem;
+          width: 35px;
+          height: 35px;
+
+          &::after,
+          &::before {
+            width: 30px;
+            height: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $tabletLarge) {
+  .modal-sendmail {
+    .modal_overlay {
+      .modal_wrapper {
+        width: 50%;
+        border-radius: 50px;
+        .modal_close {
+          top: 1.5rem;
+          right: 1.5rem;
+          width: 35px;
+          height: 35px;
+
+          &::after,
+          &::before {
+            width: 30px;
+            height: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .modal-sendmail {
+    .modal_overlay {
+      .modal_wrapper {
+        width: 90%;
+        border-radius: 50px;
+        .modal_close {
+          top: 1.5rem;
+          right: 1.5rem;
+          width: 35px;
+          height: 35px;
+
+          &::after,
+          &::before {
+            width: 30px;
+            height: 5px;
+          }
+        }
+      }
+    }
+  }
+}
