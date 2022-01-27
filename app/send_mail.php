@@ -15,8 +15,20 @@ $email = $_POST["email"];
 $phone = $_POST["phone"]; 
 $message = $_POST["message"];
 
-$body = $name . ' ' . $email . ' ' . $phone . ' ' . $message;
-$theme = "[Заявка с формы]";
+$body = "
+Сообщение:
+$message
+
+Имя:
+$name
+
+Tелефон:
+$phone
+
+Почта:
+$email
+";
+$theme = "Возможно заказ :)";
 
 $mail->addAddress("stem.09@mail.ru");
 
